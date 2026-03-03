@@ -1,6 +1,7 @@
 import json
 import os
 
+
 def load_books(filename='library.json'):
     """
     Загрузка списка книг из JSON-файла.
@@ -8,7 +9,7 @@ def load_books(filename='library.json'):
     """
     if not os.path.isfile(filename):
         return []
-    with open(filename, 'r', encoding='utf-8') as file:
+    with open(filename, encoding='utf-8') as file:
         try:
             return json.load(file)
         except json.JSONDecodeError:
